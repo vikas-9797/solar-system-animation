@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            position: absolute;
+            width: 100%;
+        }
+        .sun{
+            width: 120px;
+            height: 120px;
+            background: orange;
+            border-radius: 50%;
+            position: absolute;
+            top: calc(50% - 150px/2);
+            left: calc(50% - 150px/2);
+        }
+        .mercury{
+            --moveX:100px;
+            width: 20px;
+            height: 20px;
+            background: grey;
+            border-radius: 50%;
+            position: absolute;
+            top: calc(50% - 20px/2);
+            left: calc(50% - 20px/2);
+            transform: translate(100px);
+            animation: solarsystem 2s infinite linear;
+        }
+
+        .venus{
+            --moveX:150px;
+            width: 30px;
+            height: 30px;
+            background:brown;
+            border-radius: 50%;
+            position: absolute;
+            top: calc(50% - 30px/2);
+            left: calc(50% - 30px/2);
+            transform: translate(150px);
+            animation: solarsystem 2.5s infinite linear;
+
+        }
+
+        .earth{
+            --moveX:230px;
+            width: 70px;
+            height: 70px;
+            background: green;
+            border-radius: 50%;
+            position: absolute;
+            top: calc(50% - 70px/2);
+            left: calc(50% - 70px/2);
+            transform: translate(230px);
+            animation: solarsystem 3s infinite linear;
+
+        }
+
+        .mars{
+            --moveX:300px;
+            width: 40px;
+            height: 40px;
+            background: orangered;
+            border-radius: 50%;
+            position: absolute;
+            top: calc(50% - 40px/2);
+            left: calc(50% - 40px/2);
+            transform: translate(300px);
+            animation: solarsystem 4s infinite linear;
+
+        }
+
+        @keyframes solarsystem {
+            from{
+                transform: rotate(0deg) translate( var(--moveX));
+            }
+            to{
+                transform: rotate(360deg) translate( var(--moveX))
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="sun"></div>
+    <div class="mercury"></div>
+    <div class="venus"></div>
+    <div class="earth"></div>
+    <div class="mars"></div>
+</body>
+</html>
